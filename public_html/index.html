@@ -21,7 +21,7 @@
         <!-- Custom styles for this template -->
         <link href="starter-template.css" rel="stylesheet">
         <!-- Para que se muestre el menú vertical cuando el ancho es muy pequeño y la barra principal colapsa -->
-        <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+        <script src="../assets/js/ie-emulation-modes-warning.js"></script>
 
     </head>
 
@@ -59,17 +59,36 @@
         <div class="container">
 
             <div class="starter-template">
-                <button type="button" class="btn btn-primary btn-lg boton-central">Comenzar</button>
+                <button id="show" type="button" class="btn btn-primary btn-lg boton-central">Comenzar</button>
+
+                <button id="boton1" type="button" class="btn btn-primary btn-lg boton1">Ver almohadones</button>
+                <button id="boton2" type="button" class="btn btn-primary btn-lg boton2">Personalizar almohadón</button>
+
             </div>
 
         </div><!-- /.container -->
+
 
 
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
         <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+
+        <script>
+            $(document).ready(function () {
+                $("#boton1").hide();
+                $("#boton2").hide();
+                $("#show").click(function () {
+                    $("#boton1").show();
+                    $("#boton2").show();
+                    $("#show").hide();
+                });
+            });
+        </script>
+
         <script src="../dist/js/bootstrap.min.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
