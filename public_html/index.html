@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,17 +16,16 @@
         <title>Proyecto 1 web</title>
 
         <!-- Bootstrap core CSS -->
-        <link href="../dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <link href="../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
         <!-- Custom styles for this template -->
-        <link href="starter-template.css" rel="stylesheet">
+        <link href="css/plantilla.css" rel="stylesheet">
         <!-- Para que se muestre el menú vertical cuando el ancho es muy pequeño y la barra principal colapsa -->
-        <script src="../assets/js/ie-emulation-modes-warning.js"></script>
-
+        <script src="js/ie-emulation-modes-warning.js"></script>
     </head>
 
-    <body>
+    <body class="fondo-personalizado">
 
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
@@ -39,9 +39,15 @@
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Inicio</a></li>
-                        <li><a href="#about">Nosotros</a></li>
-                        <li><a href="#contact">Contacto</a></li>
+                        <li class="active">
+                            <a href="#">Inicio</a>
+                        </li>
+                        <li>
+                            <a href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li>
+                            <a href="contacto.html">Contacto</a>
+                        </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
@@ -52,45 +58,43 @@
                             </ul>
                         </li>
                     </ul>
-                </div>
-            </div>
+                </div> <!-- /.navbar-collapse -->
+            </div> <!-- /.container -->
         </nav>
 
+        <!-- Contenido -->
+
         <div class="container">
-
             <div class="starter-template">
-                <button id="show" type="button" class="btn btn-primary btn-lg boton-central">Comenzar</button>
-
-                <button id="boton1" type="button" class="btn btn-primary btn-lg boton1">Ver almohadones</button>
-                <button id="boton2" type="button" class="btn btn-primary btn-lg boton2">Personalizar almohadón</button>
-
+                <button id="comenzar" type="button" class="btn btn-primary btn-lg boton-central">Comenzar</button>
+                <a href="modelos.html" id="boton-ver" class="btn btn-primary btn-lg boton-ver" role="button">Ver almohadones</a>
+                <a href="#" id="boton-crear" class="btn btn-primary btn-lg boton-crear" role="button">Personalizar nuevo</a>
             </div>
-
+            
+            
         </div><!-- /.container -->
 
+        
 
+        <!-- SCRIPTS -->
 
-        <!-- Bootstrap core JavaScript
-        ================================================== -->
-        <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+        <script src="js/jquery.min.js"></script>
 
         <script>
             $(document).ready(function () {
-                $("#boton1").hide();
-                $("#boton2").hide();
-                $("#show").click(function () {
-                    $("#boton1").show();
-                    $("#boton2").show();
-                    $("#show").hide();
+                $("#boton-ver").hide();
+                $("#boton-crear").hide();
+                $("#comenzar").click(function () {
+                    $("#boton-ver").show();
+                    $("#boton-crear").show();
+                    $("#comenzar").hide();
                 });
             });
         </script>
 
-        <script src="../dist/js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-        <script src="../assets/js/ie10-viewport-bug-workaround.js"></script>
+        <script src="js/ie10-viewport-bug-workaround.js"></script>
+
     </body>
 </html>
