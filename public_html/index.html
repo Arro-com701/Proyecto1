@@ -130,68 +130,7 @@
         <!-- SCRIPTS -->
 
         <script src="js/jquery.min.js"></script>
-
-        <script>
-            function deshabilitarEstilos() {
-                
-                document.styleSheets[2].disabled = true;
-                document.styleSheets[3].disabled = true;
-            }
-
-            function setEstilo(n) {
-                deshabilitarEstilos();
-                document.styleSheets[n].disabled = false;
-            }
-
-            $(document).ready(function () {
-                $("#boton-ver").hide();
-                $("#boton-crear").hide();
-                if (localStorage.tema === "Tema 1")
-                    setEstilo(3);
-                else 
-                    setEstilo(2);
-                $("#comenzar").click(function () {
-                    $("#boton-ver").show();
-                    $("#boton-crear").show();
-                    $("#comenzar").hide();
-                });
-
-                $("#botonRojo").click(function () {
-                    $("#almohadon").attr("src", "img/almohadones/cuadrado_multiplesbotones_rojo.jpg");
-                });
-
-                $("#botonAzul").click(function () {
-                    $("#almohadon").attr("src", "img/almohadones/cuadrado_multiplesbotones_azul.jpg");
-                });
-
-                $("#botonVerde").click(function () {
-                    $("#almohadon").attr("src", "img/almohadones/cuadrado_multiplesbotones_verde.jpg");
-                });
-
-                $("#botonBeige").click(function () {
-                    $("#almohadon").attr("src", "img/almohadones/cuadrado_multiplesbotones_beige.jpg");
-                });
-
-                $("#botonRosa").click(function () {
-                    $("#almohadon").attr("src", "img/almohadones/cuadrado_multiplesbotones_rosa.jpg");
-                });
-
-                $("#botonVioleta").click(function () {
-                    $("#almohadon").attr("src", "img/almohadones/cuadrado_multiplesbotones_violeta.jpg");
-                });
-
-                $(".dropdown-menu li a").click(function () {
-                    var seleccion = ($(this).text());
-                    // Store
-                    localStorage.setItem("tema", seleccion);
-                    if (seleccion === "Tema 1")
-                        setEstilo(3);
-                    else
-                        setEstilo(2);
-                });
-            });
-        </script>
-
+        <script src="js/index.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="js/ie10-viewport-bug-workaround.js"></script>
