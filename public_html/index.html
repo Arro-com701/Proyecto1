@@ -132,14 +132,14 @@
         <script src="js/jquery.min.js"></script>
 
         <script>
-            function noStyles() {
+            function deshabilitarEstilos() {
                 
                 document.styleSheets[2].disabled = true;
                 document.styleSheets[3].disabled = true;
             }
 
-            function reStyle(n) {
-                noStyles();
+            function setEstilo(n) {
+                deshabilitarEstilos();
                 document.styleSheets[n].disabled = false;
             }
 
@@ -147,9 +147,9 @@
                 $("#boton-ver").hide();
                 $("#boton-crear").hide();
                 if (localStorage.tema === "Tema 1")
-                    reStyle(3);
+                    setEstilo(3);
                 else 
-                    reStyle(2);
+                    setEstilo(2);
                 $("#comenzar").click(function () {
                     $("#boton-ver").show();
                     $("#boton-crear").show();
@@ -185,9 +185,9 @@
                     // Store
                     localStorage.setItem("tema", seleccion);
                     if (seleccion === "Tema 1")
-                        reStyle(3);
+                        setEstilo(3);
                     else
-                        reStyle(2);
+                        setEstilo(2);
                 });
             });
         </script>
