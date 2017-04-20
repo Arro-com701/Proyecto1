@@ -20,6 +20,7 @@
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
         <!-- Custom styles for this template -->
+        <link href="css/plantilla2.css" rel="stylesheet">
         <link href="css/plantilla.css" rel="stylesheet">
         <!-- Para que se muestre el menú vertical cuando el ancho es muy pequeño y la barra principal colapsa -->
         <script src="js/ie-emulation-modes-warning.js"></script>
@@ -80,7 +81,40 @@
                             <h4 class="modal-title" id="myModalLabel">Modal title</h4>
                         </div>
                         <div class="modal-body">
-                            ...
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <img id="almohadon" class="img-responsive" src="img/almohadones/cuadrado_multiplesbotones_rojo.jpg">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            Forma y diseño:<br>
+                                            FORMA                   DISEÑO
+                                        </div>
+                                        <div class="row">
+                                            Color: <br>
+                                            <button id="botonRojo" type="button" class="btn boton-rojo"></button>
+                                            <button id="botonAzul" type="button" class="btn boton-azul"></button>
+                                            <button id="botonVerde" type="button" class="btn boton-verde"></button>
+                                            <button id="botonBeige" type="button" class="btn boton-beige"></button>
+                                            <button id="botonRosa" type="button" class="btn boton-rosa"></button>
+                                            <button id="botonVioleta" type="button" class="btn boton-violeta"></button>
+                                        </div>
+                                        <div class="row">
+                                            Texto: <br>
+                                            <textarea class="form-control" rows="2" id="comment"></textarea>                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    PRESUPUESTO
+                                </div>
+                                <div class="row">
+                                    DASSDASADDSADS
+                                </div>
+                                <div class="row">
+                                    BOTON
+                                </div>
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -98,13 +132,62 @@
         <script src="js/jquery.min.js"></script>
 
         <script>
+            function noStyles() {
+                
+                document.styleSheets[2].disabled = true;
+                document.styleSheets[3].disabled = true;
+            }
+
+            function reStyle(n) {
+                noStyles();
+                document.styleSheets[n].disabled = false;
+            }
+
             $(document).ready(function () {
                 $("#boton-ver").hide();
                 $("#boton-crear").hide();
+                if (localStorage.tema === "Tema 1")
+                    reStyle(3);
+                else 
+                    reStyle(2);
                 $("#comenzar").click(function () {
                     $("#boton-ver").show();
                     $("#boton-crear").show();
                     $("#comenzar").hide();
+                });
+
+                $("#botonRojo").click(function () {
+                    $("#almohadon").attr("src", "img/almohadones/cuadrado_multiplesbotones_rojo.jpg");
+                });
+
+                $("#botonAzul").click(function () {
+                    $("#almohadon").attr("src", "img/almohadones/cuadrado_multiplesbotones_azul.jpg");
+                });
+
+                $("#botonVerde").click(function () {
+                    $("#almohadon").attr("src", "img/almohadones/cuadrado_multiplesbotones_verde.jpg");
+                });
+
+                $("#botonBeige").click(function () {
+                    $("#almohadon").attr("src", "img/almohadones/cuadrado_multiplesbotones_beige.jpg");
+                });
+
+                $("#botonRosa").click(function () {
+                    $("#almohadon").attr("src", "img/almohadones/cuadrado_multiplesbotones_rosa.jpg");
+                });
+
+                $("#botonVioleta").click(function () {
+                    $("#almohadon").attr("src", "img/almohadones/cuadrado_multiplesbotones_violeta.jpg");
+                });
+
+                $(".dropdown-menu li a").click(function () {
+                    var seleccion = ($(this).text());
+                    // Store
+                    localStorage.setItem("tema", seleccion);
+                    if (seleccion === "Tema 1")
+                        reStyle(3);
+                    else
+                        reStyle(2);
                 });
             });
         </script>
