@@ -1,4 +1,4 @@
-// PANEL DE CREACIÓN DE ALMOHADÓN
+// PRECIO
 
 function actualizarAlmohadon() {
     var newSRC = baseSRC + almohadonNuevo.modelo + "_" + almohadonNuevo.forma + "_" + almohadonNuevo.color + ".jpg";
@@ -130,6 +130,11 @@ var almohadonNuevo = {
     "forma": "cuadrado",
     "color": "rojo"
 };
+
+function actualizarAlmohadon() {
+    var newSRC = baseSRC + almohadonNuevo.modelo + "_" + almohadonNuevo.forma + "_" + almohadonNuevo.color + ".jpg";
+    $("#almohadon").attr("src", newSRC);
+}
 
 //Almohadón por defecto
 
