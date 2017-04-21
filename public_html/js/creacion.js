@@ -13,6 +13,14 @@ function forma() {
     });
 }
 
+function modelo() {
+    $(".modal a").click(function () {
+        almohadonNuevo.modelo = $(this).attr("id");
+        actualizarAlmohadon();
+        $('#myModal').modal('hide');
+    });
+}
+
 function botonesColores() {
     $("#botonRojo").click(function () {
         almohadonNuevo.color = "rojo";
@@ -68,4 +76,5 @@ $(document).ready(function () {
     seleccionTema();
     setAlmohadonPorDefecto();
     forma();
+    modelo();
 });
