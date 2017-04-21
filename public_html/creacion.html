@@ -22,6 +22,7 @@
         <!-- Custom styles for this template -->
         <link href="css/plantilla2.css" rel="stylesheet">
         <link href="css/plantilla.css" rel="stylesheet">
+        <link href="css/creacion.css" rel="stylesheet">
         <!-- Para que se muestre el menú vertical cuando el ancho es muy pequeño y la barra principal colapsa -->
         <script src="js/ie-emulation-modes-warning.js"></script>
     </head>
@@ -66,104 +67,122 @@
         <!-- Contenido -->
 
         <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <img id="almohadon" class="img-responsive" src="">
-                </div>
-                <div class="col-md-6">
-                    <div class="row">
-                        Forma y diseño:<br>
-                        <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                            Modelo
-                        </button>
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                            <div class="modal-dialog" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                        <h4 class="modal-title" id="myModalLabel">Seleccionar modelo</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <!-- Page Heading -->
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <h1 class="page-header">
-                                                    Modelos                    
-                                                </h1>
-                                            </div>
-                                        </div>
-                                        <!-- /.row -->
+            <div class="panel panel-default">
 
 
-                                        <!-- Projects Row -->
-                                        <div class="row">
-                                            <div class="col-md-4 portfolio-item">
-                                                <a href="#" id="modelo1">
-                                                    <img class="img-responsive" src="img/almohadones/modelo1_cuadrado_azul.jpg" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="col-md-4 portfolio-item">
-                                                <a href="#" id="modelo2">
-                                                    <img class="img-responsive" src="img/almohadones/modelo2_cuadrado_azul.jpg" alt="">
-                                                </a>
-                                            </div>
-                                            <div class="col-md-4 portfolio-item">
-                                                <a href="#" id="modelo3">
-                                                    <img class="img-responsive" src="img/almohadones/modelo3_cuadrado_azul.jpg" alt="">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- /.row -->
+                <div class="panel-body">
+
+                    <div class="container-fluid">
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <img id="almohadon" width="350" height="350" src="">
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <label>Diseño:</label>
+                                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                                        Modelo
+                                    </button>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="form-group">
+                                        <label for="sel1">Forma:</label>
+                                        <select class="form-control" id="selectorForma">
+                                            <option>Cuadrado</option>
+                                            <option>Curvo</option>
+                                            <option>Rectangular</option>
+                                        </select>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    Color: <br>
+                                    <button id="botonRojo" type="button" class="btn boton-rojo"></button>
+                                    <button id="botonAzul" type="button" class="btn boton-azul"></button>
+                                    <button id="botonVerde" type="button" class="btn boton-verde"></button>
+                                    <button id="botonBeige" type="button" class="btn boton-beige"></button>
+                                    <button id="botonRosa" type="button" class="btn boton-rosa"></button>
+                                    <button id="botonVioleta" type="button" class="btn boton-violeta"></button>
+                                </div>
+                                <div class="row">
+                                    Texto: <br>
+                                    <textarea class="form-control" rows="2" id="comment"></textarea>                                    
+                                </div>
+
                             </div>
+
                         </div>
-                        <div class="form-group">
-                            <label for="sel1">Forma:</label>
-                            <select class="form-control" id="selectorForma">
-                                <option>Cuadrado</option>
-                                <option>Curvo</option>
-                                <option>Rectangular</option>
-                            </select>
+                        <div class="row">
+                            PRECIO
+                        </div>
+                        <div class="row">
+                            <ul>
+                                <li>Modelo: <span id="precioModelo"></span></li>
+                                <li>Forma: <span id="precioForma"></span></li>
+                                <li>Color: <span id="precioColor"></span></li>
+                                <li>Inscripción personalizada: <span id="precioInscripcion"></span></li>
+                            </ul>
+                        </div>
+                        <div class="row">
+                            Total: <span id="precioTotal"></span>
                         </div>
                     </div>
-                    <div class="row">
-                        Color: <br>
-                        <button id="botonRojo" type="button" class="btn boton-rojo"></button>
-                        <button id="botonAzul" type="button" class="btn boton-azul"></button>
-                        <button id="botonVerde" type="button" class="btn boton-verde"></button>
-                        <button id="botonBeige" type="button" class="btn boton-beige"></button>
-                        <button id="botonRosa" type="button" class="btn boton-rosa"></button>
-                        <button id="botonVioleta" type="button" class="btn boton-violeta"></button>
-                    </div>
-                    <div class="row">
-                        Texto: <br>
-                        <textarea class="form-control" rows="2" id="comment"></textarea>                                        </div>
                 </div>
             </div>
-            <div class="row">
-                PRECIO
-            </div>
-            <div class="row">
-                <ul>
-                    <li>Modelo: <span id="precioModelo"></span></li>
-                    <li>Forma: <span id="precioForma"></span></li>
-                    <li>Color: <span id="precioColor"></span></li>
-                    <li>Inscripción personalizada: <span id="precioInscripcion"></span></li>
-                </ul>
-            </div>
-            <div class="row">
-                Total: <span id="precioTotal"></span>
-            </div>
+
 
 
 
         </div><!-- /.container -->
 
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Seleccionar modelo</h4>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Page Heading -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h1 class="page-header">
+                                    Modelos                    
+                                </h1>
+                            </div>
+                        </div>
+                        <!-- /.row -->
 
+
+                        <!-- Projects Row -->
+                        <div class="row">
+                            <div class="col-md-4 portfolio-item">
+                                <a href="#" id="modelo1">
+                                    <img class="img-responsive" src="img/almohadones/modelo1_cuadrado_azul.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-4 portfolio-item">
+                                <a href="#" id="modelo2">
+                                    <img class="img-responsive" src="img/almohadones/modelo2_cuadrado_azul.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="col-md-4 portfolio-item">
+                                <a href="#" id="modelo3">
+                                    <img class="img-responsive" src="img/almohadones/modelo3_cuadrado_azul.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- SCRIPTS -->
 
