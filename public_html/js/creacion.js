@@ -1,13 +1,8 @@
 // PRECIO
 
-function actualizarAlmohadon() {
-    var newSRC = baseSRC + almohadonNuevo.modelo + "_" + almohadonNuevo.forma + "_" + almohadonNuevo.color + ".jpg";
-    $("#almohadon").attr("src", newSRC);
-}
-
 function actualizarPrecio() {
-    var total = actualizarPrecioForma()+actualizarPrecioModelo()+actualizarPrecioColor();
-    $("#precioTotal").text("$"+total);
+    var total = actualizarPrecioForma() + actualizarPrecioModelo() + actualizarPrecioColor();
+    $("#precioTotal").text("$" + total);
 }
 
 function actualizarPrecioForma() {
@@ -84,43 +79,10 @@ function modelo() {
     });
 }
 
-//RESUMIR ESTO ASI PUEDO ESCRIBIR UNA FUNCION SOLA
-function botonesColores() {
-    $("#botonRojo").click(function () {
-        almohadonNuevo.color = "rojo";
-        actualizarAlmohadon();
-        actualizarPrecio();
-    });
-
-    $("#botonAzul").click(function () {
-        almohadonNuevo.color = "azul";
-        actualizarAlmohadon();
-        actualizarPrecio();
-    });
-
-    $("#botonVerde").click(function () {
-        almohadonNuevo.color = "verde";
-        actualizarAlmohadon();
-        actualizarPrecio();
-    });
-
-    $("#botonBeige").click(function () {
-        almohadonNuevo.color = "beige";
-        actualizarAlmohadon();
-        actualizarPrecio();
-    });
-
-    $("#botonRosa").click(function () {
-        almohadonNuevo.color = "rosa";
-        actualizarAlmohadon();
-        actualizarPrecio();
-    });
-
-    $("#botonVioleta").click(function () {
-        almohadonNuevo.color = "violeta";
-        actualizarAlmohadon();
-        actualizarPrecio();
-    });
+function cambiarColor() {
+    almohadonNuevo.color = $(this).attr("id");
+    actualizarAlmohadon();
+    actualizarPrecio();
 }
 
 var baseSRC = "img/almohadones/";
@@ -147,9 +109,42 @@ function setAlmohadonPorDefecto() {
 
 $(document).ready(function () {
     cargarEstilo();
-    botonesColores();
     seleccionTema();
     setAlmohadonPorDefecto();
     forma();
     modelo();
+    cargarConfiguracionOpciones();
 });
+
+
+function cargarConfiguracionOpciones() {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            cargarOpcionesForma(this.responseXML);
+            cargarOpcionesColor(this.responseXML);
+        }
+    };
+    xhttp.open("GET", "../opciones.xml", true);
+    xhttp.send();
+}
+
+function cargarOpcionesForma(xml) {
+    var opciones = xml.getElementsByTagName("forma")[0].getElementsByTagName("opcion");
+    for (i = 0; i < opciones.length; i++) {
+        $("#selectorForma").append("<option>" + opciones[i].childNodes[0].nodeValue + "</option>");
+    }
+}
+
+function cargarOpcionesColor(xml) {
+    var opciones = xml.getElementsByTagName("color")[0].getElementsByTagName("opcion");
+    for (i = 0; i < opciones.length; i++) {
+        var boton = $("<button id=\"" + opciones[i].getElementsByTagName("nombre")[0].childNodes[0].nodeValue + "\"" + " type=\"" + "button" + "\"" + "></button>");
+        $("#botonesColores").append(boton);
+        boton.addClass("btn");
+        boton.css("background-color", opciones[i].getElementsByTagName("rgb")[0].childNodes[0].nodeValue);
+        boton.css("border-color", "#ccc");
+        boton.css("margin-right", "5px");
+        boton.click(cambiarColor);
+    }
+}

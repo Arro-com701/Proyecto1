@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<almohadon>
+	<modelo>
+		<opcion>modelo1</opcion>
+		<opcion>modelo2</opcion>
+		<opcion>modelo3</opcion>
+	</modelo>
+	<forma>
+		<opcion>cuadrado</opcion>
+		<opcion>curvo</opcion>
+		<opcion>rectangular</opcion>
+	</forma>
+	<color>
+		<opcion>
+			<nombre>rojo</nombre>
+			<rgb>rgb(255,0,0)</rgb>
+		</opcion>
+		<opcion>
+			<nombre>azul</nombre>
+			<rgb>rgb(0,0,255)</rgb>
+		</opcion>
+		<opcion>
+			<nombre>verde</nombre>
+			<rgb>rgb(0,255,0)</rgb>
+		</opcion>
+		<opcion>
+			<nombre>beige</nombre>
+			<rgb>rgb(129,141,49)</rgb>
+		</opcion>
+		<opcion>
+			<nombre>violeta</nombre>
+			<rgb>rgb(102,0,102)</rgb>
+		</opcion>
+		<opcion>
+			<nombre>rosa</nombre>
+			<rgb>rgb(255,0,255)</rgb>
+		</opcion>
+	</color>
+</almohadon>
