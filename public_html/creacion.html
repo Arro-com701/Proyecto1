@@ -13,7 +13,7 @@
         <meta name="author" content="Gonzalo Arró">
         <link rel="icon" href="../cushion.png">
 
-        <title>Proyecto 1 web</title>
+        <title>Nuevo almohadón</title>
 
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -97,7 +97,7 @@
                             <div class="col-md-6">
                                 <br>
                                 <div class="row">
-                                    <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
                                         Modelo
                                     </button>
                                 </div>
@@ -126,10 +126,10 @@
                                 </div>
                                 <br>
                                 <div class="row">
-                                    <button id="agregarTexto" type="button" class="btn btn-primary btn-lg">
+                                    <button id="agregarTexto" type="button" class="btn btn-primary">
                                         Añadir texto
                                     </button>
-                                    <button id="borrarTexto" type="button" class="btn btn-primary btn-lg">
+                                    <button id="borrarTexto" type="button" class="btn btn-primary">
                                         Borrar texto
                                     </button>
                                 </div>
@@ -138,26 +138,18 @@
 
                         </div>
                         <div class="row">
-                            PRECIO
-                        </div>
-                        <div class="row">
-                            <ul>
-                                <li>Modelo: <span id="precioModelo"></span></li>
-                                <li>Forma: <span id="precioForma"></span></li>
-                                <li>Color: <span id="precioColor"></span></li>
-                                <li>Inscripción personalizada: <span id="precioInscripcion"></span></li>
-                            </ul>
-                        </div>
-                        <div class="row">
-                            Total: <span id="precioTotal"></span>
+                            <br>
+                            <hr>
+
+                            <center>
+                                <button id="botonPrecio" type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modalPrecio">
+                                    Precio
+                                </button>
+                            </center>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
-
         </div><!-- /.container -->
 
         <!-- Modal para elegir modelo -->
@@ -176,6 +168,38 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Modal para mostrar el precio -->
+        <div class="modal fade" id="modalPrecio" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Precio</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <label>Modelo: </label><span id="precioModelo"></span>
+                            </div>
+                            <div class="row">
+                                <label>Forma: </label><span id="precioForma"></span>
+                            </div>
+                            <div class="row">
+                                <label>Color: </label><span id="precioColor"></span>
+                            </div>
+                            <div class="row">
+                                <label>Texto personalizado: </label><span id="precioTexto"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <label>Total: </label><span id="precioTotal"></span>
+                    </div>
+                </div>
+
             </div>
         </div>
 
