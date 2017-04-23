@@ -70,13 +70,11 @@ function forma() {
     });
 }
 
-function modelo() {
-    $(".modal a").click(function () {
-        almohadonNuevo.modelo = $(this).attr("id");
-        actualizarAlmohadon();
-        actualizarPrecio();
-        $('#myModal').modal('hide');
-    });
+function cambiarModelo() {
+    almohadonNuevo.modelo = $(this).attr("id");
+    actualizarAlmohadon();
+    actualizarPrecio();
+    $('#myModal').modal('hide');
 }
 
 function cambiarColor() {
@@ -112,7 +110,6 @@ $(document).ready(function () {
     seleccionTema();
     setAlmohadonPorDefecto();
     forma();
-    modelo();
     cargarConfiguracionOpciones();
 });
 
@@ -123,6 +120,7 @@ function cargarConfiguracionOpciones() {
         if (this.readyState == 4 && this.status == 200) {
             cargarOpcionesForma(this.responseXML);
             cargarOpcionesColor(this.responseXML);
+            cargarOpcionesModelo(this.responseXML);
         }
     };
     xhttp.open("GET", "../opciones.xml", true);
@@ -146,5 +144,20 @@ function cargarOpcionesColor(xml) {
         boton.css("border-color", "#ccc");
         boton.css("margin-right", "5px");
         boton.click(cambiarColor);
+    }
+}
+
+function cargarOpcionesModelo(xml) {
+    var opciones = xml.getElementsByTagName("modelo")[0].getElementsByTagName("opcion");
+    for (i = 0; i < opciones.length; i++) {
+        var div = $("<div class=\"" + "col-md-4 portfolio-item\"" + ">");
+        var link = $("<a href=\"#\" " + "id=\"" + opciones[i].childNodes[0].nodeValue + "\">");
+        var imagen = $("<img/>");
+        imagen.addClass("img-responsive");
+        imagen.attr("src", "img/almohadones/" + opciones[i].childNodes[0].nodeValue + "_cuadrado_azul.jpg");
+        link.append(imagen);
+        div.append(link);   
+        $("#opcionesModelos").append(div);
+        link.click(cambiarModelo);
     }
 }
