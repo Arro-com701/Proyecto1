@@ -1,13 +1,6 @@
 body {
     padding-top: 70px;
-}
-
-.fondo-personalizado {
     background-image: url("../img/fondotela3.jpg");
     background-size: cover
-}
-
-footer {
-    margin: 50px 0;
 }
 

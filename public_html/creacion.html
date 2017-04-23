@@ -26,6 +26,7 @@
         <!-- Para que se muestre el menú vertical cuando el ancho es muy pequeño y la barra principal colapsa -->
         <script src="js/ie-emulation-modes-warning.js"></script>
 
+        <!-- fuente personalizada para el texto sobre los almohadones -->
         <style>
             @font-face {
                 font-family: 'VTKS EMBROIDERY';
@@ -36,8 +37,9 @@
         </style>
     </head>
 
-    <body class="fondo-personalizado">
+    <body>
 
+        <!-- BARRA NAVEGACIÓN -->
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
@@ -93,14 +95,13 @@
                             </div>
 
                             <div class="col-md-6">
+                                <br>
                                 <div class="row">
-                                    <label>Diseño:</label>
                                     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
                                         Modelo
                                     </button>
                                 </div>
-
-
+                                <hr>
                                 <div class="row">
                                     <div class="form-group">
                                         <label>Forma:</label>
@@ -109,16 +110,22 @@
                                         </select>
                                     </div>
                                 </div>
+                                <hr>
                                 <div class="row">
-                                    Color: <br>
+                                    <label>Color:</label>
                                     <div id="botonesColores">
                                         <!-- botones creados en el js -->
                                     </div>
 
                                 </div>
+                                <hr>
                                 <div class="row">
-                                    Texto: <br>
+                                    <label>Texto:</label>
                                     <textarea id="texto" class="form-control" rows="1"></textarea>                                    
+
+                                </div>
+                                <br>
+                                <div class="row">
                                     <button id="agregarTexto" type="button" class="btn btn-primary btn-lg">
                                         Añadir texto
                                     </button>
@@ -153,7 +160,7 @@
 
         </div><!-- /.container -->
 
-        <!-- Modal -->
+        <!-- Modal para elegir modelo -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
@@ -162,30 +169,11 @@
                         <h4 class="modal-title" id="myModalLabel">Seleccionar modelo</h4>
                     </div>
                     <div class="modal-body">
-
-
-
-                        <!-- Projects Row -->
                         <div class="row">
                             <div id="opcionesModelos">
-                                <!--    <div class="col-md-4 portfolio-item">
-                                        <a href="#" id="modelo1">
-                                            <img class="img-responsive" src="img/almohadones/modelo1_cuadrado_azul.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-md-4 portfolio-item">
-                                        <a href="#" id="modelo2">
-                                            <img class="img-responsive" src="img/almohadones/modelo2_cuadrado_azul.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-md-4 portfolio-item">
-                                        <a href="#" id="modelo3">
-                                            <img class="img-responsive" src="img/almohadones/modelo3_cuadrado_azul.jpg" alt="">
-                                        </a>
-                                    </div>-->
+                                <!-- cargadas en el xml -->
                             </div>
                         </div>
-                        <!-- /.row -->
                     </div>
                 </div>
             </div>

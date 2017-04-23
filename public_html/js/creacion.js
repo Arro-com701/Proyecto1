@@ -212,7 +212,9 @@ function cargarOpcionesModelo(xml) {
         // imagen con modelo
         var imagen = $("<img/>");
         imagen.addClass("img-responsive");
-        imagen.attr("src", "img/almohadones/" + opciones[i].childNodes[0].nodeValue + "_cuadrado_azul.jpg");
+        var formaPorDefecto = xml.getElementsByTagName("forma")[0].getElementsByTagName("opcion")[0].childNodes[0].nodeValue;
+        var colorPorDefecto = xml.getElementsByTagName("color")[0].getElementsByTagName("opcion")[0].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+        imagen.attr("src", "img/almohadones/" + opciones[i].childNodes[0].nodeValue + "_"+formaPorDefecto+"_"+colorPorDefecto+".png");
 
         // conecto los elementos
         link.append(imagen);
