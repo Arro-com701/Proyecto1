@@ -1,6 +1,5 @@
-@font-face {
-    font-family: 'VTKS EMBROIDERY';
-    font-style: normal;
-    font-weight: normal;
-    src: local('VTKS EMBROIDERY'), url('VTKS embroidery.woff') format('woff');
+canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
 }
