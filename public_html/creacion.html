@@ -25,6 +25,15 @@
         <link href="css/creacion.css" rel="stylesheet">
         <!-- Para que se muestre el menú vertical cuando el ancho es muy pequeño y la barra principal colapsa -->
         <script src="js/ie-emulation-modes-warning.js"></script>
+
+        <style>
+            @font-face {
+                font-family: 'VTKS EMBROIDERY';
+                font-style: normal;
+                font-weight: normal;
+                src: local('VTKS EMBROIDERY'), url('VTKS embroidery.woff') format('woff');
+            }
+        </style>
     </head>
 
     <body class="fondo-personalizado">
@@ -78,7 +87,9 @@
                         <div class="row">
 
                             <div class="col-md-6">
-                                <img id="almohadon" width="350" height="350" src="">
+                                <canvas id="myCanvas" width="350" height="350">                 
+                                    <canvas id="canvasTexto" width="350" height="350"></canvas>
+                                </canvas>
                             </div>
 
                             <div class="col-md-6">
@@ -107,7 +118,13 @@
                                 </div>
                                 <div class="row">
                                     Texto: <br>
-                                    <textarea class="form-control" rows="2" id="comment"></textarea>                                    
+                                    <textarea id="texto" class="form-control" rows="1"></textarea>                                    
+                                    <button id="agregarTexto" type="button" class="btn btn-primary btn-lg">
+                                        Añadir texto
+                                    </button>
+                                    <button id="borrarTexto" type="button" class="btn btn-primary btn-lg">
+                                        Borrar texto
+                                    </button>
                                 </div>
 
                             </div>
@@ -159,21 +176,21 @@
                         <!-- Projects Row -->
                         <div class="row">
                             <div id="opcionesModelos">
-                            <!--    <div class="col-md-4 portfolio-item">
-                                    <a href="#" id="modelo1">
-                                        <img class="img-responsive" src="img/almohadones/modelo1_cuadrado_azul.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="col-md-4 portfolio-item">
-                                    <a href="#" id="modelo2">
-                                        <img class="img-responsive" src="img/almohadones/modelo2_cuadrado_azul.jpg" alt="">
-                                    </a>
-                                </div>
-                                <div class="col-md-4 portfolio-item">
-                                    <a href="#" id="modelo3">
-                                        <img class="img-responsive" src="img/almohadones/modelo3_cuadrado_azul.jpg" alt="">
-                                    </a>
-                                </div>-->
+                                <!--    <div class="col-md-4 portfolio-item">
+                                        <a href="#" id="modelo1">
+                                            <img class="img-responsive" src="img/almohadones/modelo1_cuadrado_azul.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 portfolio-item">
+                                        <a href="#" id="modelo2">
+                                            <img class="img-responsive" src="img/almohadones/modelo2_cuadrado_azul.jpg" alt="">
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 portfolio-item">
+                                        <a href="#" id="modelo3">
+                                            <img class="img-responsive" src="img/almohadones/modelo3_cuadrado_azul.jpg" alt="">
+                                        </a>
+                                    </div>-->
                             </div>
                         </div>
                         <!-- /.row -->

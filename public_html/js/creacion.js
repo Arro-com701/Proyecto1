@@ -88,12 +88,14 @@ var baseSRC = "img/almohadones/";
 var almohadonNuevo = {
     "modelo": "botoncentral",
     "forma": "cuadrado",
-    "color": "rojo"
+    "color": "rojo",
+    "texto": ""
 };
 
 function actualizarAlmohadon() {
-    var newSRC = baseSRC + almohadonNuevo.modelo + "_" + almohadonNuevo.forma + "_" + almohadonNuevo.color + ".jpg";
-    $("#almohadon").attr("src", newSRC);
+    var newSRC = baseSRC + almohadonNuevo.modelo + "_" + almohadonNuevo.forma + "_" + almohadonNuevo.color + ".png";
+    actualizarCanvas(newSRC);
+
 }
 
 //Almohadón por defecto
@@ -107,12 +109,51 @@ function setAlmohadonPorDefecto() {
 
 $(document).ready(function () {
     cargarEstilo();
-    seleccionTema();
-    setAlmohadonPorDefecto();
+    seleccionTema(); 
     forma();
     cargarConfiguracionOpciones();
+    setAlmohadonPorDefecto();
+    texto();
+
 });
 
+var imageObj = new Image();
+var canvas = document.getElementById('myCanvas');
+var context = canvas.getContext('2d');
+
+function texto() {
+    $("#borrarTexto").prop("disabled",true);
+    $("#agregarTexto").click(function() {
+        almohadonNuevo.texto = $("#texto").val();
+            actualizarAlmohadon();
+            $("#agregarTexto").prop("disabled",true);
+            $("#borrarTexto").prop("disabled",false);
+    });
+    
+    $("#borrarTexto").click(function() {
+        almohadonNuevo.texto = "";
+            actualizarAlmohadon();
+            $("#agregarTexto").prop("disabled",false);
+            $("#borrarTexto").prop("disabled",true);
+    });
+}
+
+
+
+
+
+function actualizarCanvas(src) {
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    imageObj = new Image();
+    imageObj.onload = function () {
+        context.drawImage(imageObj, 0, 0, 350, 350);
+        context.font = '32px VTKS EMBROIDERY';
+        context.fillText(almohadonNuevo.texto, 70, 220, 210);
+    };
+    imageObj.src = src;
+}
+
+// CONFIGURACIÓN A PARTIR DE XML
 
 function cargarConfiguracionOpciones() {
     var xhttp = new XMLHttpRequest();
@@ -156,7 +197,7 @@ function cargarOpcionesModelo(xml) {
         imagen.addClass("img-responsive");
         imagen.attr("src", "img/almohadones/" + opciones[i].childNodes[0].nodeValue + "_cuadrado_azul.jpg");
         link.append(imagen);
-        div.append(link);   
+        div.append(link);
         $("#opcionesModelos").append(div);
         link.click(cambiarModelo);
     }
