@@ -6,10 +6,10 @@
 function cargarEstilo() {
     // Los valores en setEstilo son por la ubicación de las css
     // en index.html
-    if (localStorage.tema === "Tema 1")
-        setEstilo(2);
-    else
+    if (localStorage.tema === "Tema 2")
         setEstilo(3);
+    else
+        setEstilo(2);
 }
 
 /*
