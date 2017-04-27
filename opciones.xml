@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<almohadon>
+	<modelo>
+		<opcion>
+			<nombre>modelo1</nombre>
+			<precio>140</precio>
+		</opcion>
+		<opcion>
+			<nombre>modelo2</nombre>
+			<precio>160</precio>
+		</opcion>
+		<opcion>
+			<nombre>modelo3</nombre>
+			<precio>185</precio>
+		</opcion>
+	</modelo>
+	<forma>
+		<opcion>
+			<nombre>cuadrado</nombre>
+			<precio>0</precio>
+		</opcion>
+		<opcion>
+			<nombre>rectangular</nombre>
+			<precio>10</precio>
+		</opcion>
+		<opcion>
+			<nombre>curvo</nombre>
+			<precio>20</precio>
+		</opcion>
+
+	</forma>
+	<color>
+		<opcion>
+			<nombre>rojo</nombre>
+			<rgb>rgb(255,0,0)</rgb>
+			<precio>10</precio>
+		</opcion>
+		<opcion>
+			<nombre>azul</nombre>
+			<rgb>rgb(0,0,255)</rgb>
+			<precio>10</precio>
+		</opcion>
+		<opcion>
+			<nombre>verde</nombre>
+			<rgb>rgb(0,255,0)</rgb>
+			<precio>20</precio>
+		</opcion>
+		<opcion>
+			<nombre>beige</nombre>
+			<rgb>rgb(204,153,0)</rgb>
+			<precio>5</precio>
+		</opcion>
+		<opcion>
+			<nombre>violeta</nombre>
+			<rgb>rgb(102,0,102)</rgb>
+			<precio>20</precio>
+		</opcion>
+		<opcion>
+			<nombre>rosa</nombre>
+			<rgb>rgb(255,0,255)</rgb>
+			<precio>10</precio>
+		</opcion>
+	</color>
+</almohadon>

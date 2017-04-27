@@ -13,20 +13,21 @@
         <meta name="author" content="Gonzalo Arró">
         <link rel="icon" href="../cushion.png">
 
-        <title>Proyecto 1 web</title>
+        <title>Franchesca Cushions</title>
 
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
         <!-- Custom styles for this template -->
-        <link href="css/plantilla2.css" rel="stylesheet">
         <link href="css/plantilla.css" rel="stylesheet">
+        <link href="css/plantilla2.css" rel="stylesheet">
+        <link href="css/index.css" rel="stylesheet">
         <!-- Para que se muestre el menú vertical cuando el ancho es muy pequeño y la barra principal colapsa -->
         <script src="js/ie-emulation-modes-warning.js"></script>
     </head>
 
-    <body class="fondo-personalizado">
+    <body>
 
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
@@ -49,6 +50,9 @@
                         <li>
                             <a href="contacto.html">Contacto</a>
                         </li>
+                        <li>
+                            <a href="readme.html">Readme</a>
+                        </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
@@ -64,161 +68,29 @@
         </nav>
 
         <!-- Contenido -->
+        
+            <div class="container"><div class="jumbotron">
+                <div class="starter-template">
 
-        <div class="container">
-            <div class="starter-template">
-                <button id="comenzar" type="button" class="btn btn-primary btn-lg boton-central">Comenzar</button>
-                <a href="#" id="boton-ver" class="btn btn-primary btn-lg boton-ver" role="button" data-toggle="modal" data-target="#myModal2">Ver almohadones</a>
-                <a href="#" id="boton-crear" class="btn btn-primary btn-lg boton-crear" role="button" data-toggle="modal" data-target="#myModal">Personalizar nuevo</a>
-            </div>
+                    <h1>Bienvenido</h1>
+                    <p>Mirá nuestros diseños o crea el tuyo!</p>
+                    <button id="comenzar" type="button" class="btn btn-primary btn-lg boton">Comenzar</button>
+                    <a href="modelos-page1.html" id="boton-ver" class="btn btn-primary btn-lg boton" role="button">Ver modelos</a>
+                    <a href="creacion.html" id="boton-crear" class="btn btn-primary btn-lg boton" role="button">Personalizar nuevo</a>
 
-            <!-- Modal -->
-            <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="myModalLabel">Modelos</h4>
-                        </div>
-                        <div class="modal-body">
-                            <div class="container-fluid">
-                                <!-- Page Heading -->
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <h1 class="page-header">
-                                            Modelos
-                                        </h1>
-                                    </div>
-                                </div>
-                                <!-- /.row -->
-
-                                <!-- Projects Row -->
-                                <div class="row">
-                                    <div class="col-md-4 portfolio-item">
-                                        <a href="#">
-                                            <img class="img-responsive" src="img/cuadrado_personalizado1.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-md-4 portfolio-item">
-                                        <a href="#">
-                                            <img class="img-responsive" src="img/cuadrado_personalizado2.jpg" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-md-4 portfolio-item">
-                                        <a href="#">
-                                            <img class="img-responsive" src="img/cuadrado_personalizado3.jpg" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <!-- /.row -->
-
-                                <!-- Projects Row -->
-                                <div class="row">
-                                    <div class="col-md-4 portfolio-item">
-                                        <a href="#">
-                                            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-md-4 portfolio-item">
-                                        <a href="#">
-                                            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-md-4 portfolio-item">
-                                        <a href="#">
-                                            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <!-- /.row -->       
-
-                                <!-- Projects Row -->
-                                <div class="row">
-                                    <div class="col-md-4 portfolio-item">
-                                        <a href="#">
-                                            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-md-4 portfolio-item">
-                                        <a href="#">
-                                            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="col-md-4 portfolio-item">
-                                        <a href="#">
-                                            <img class="img-responsive" src="http://placehold.it/750x450" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                                <!-- /.row -->       
-                            </div> <!-- /.container -->
-                            
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
                 </div>
-            </div>
-            <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                        </div>
-                        <div class="modal-body">
-                            <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <img id="almohadon" class="img-responsive" src="img/almohadones/cuadrado_multiplesbotones_rojo.jpg">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="row">
-                                            Forma y diseño:<br>
-                                            FORMA                   DISEÑO
-                                        </div>
-                                        <div class="row">
-                                            Color: <br>
-                                            <button id="botonRojo" type="button" class="btn boton-rojo"></button>
-                                            <button id="botonAzul" type="button" class="btn boton-azul"></button>
-                                            <button id="botonVerde" type="button" class="btn boton-verde"></button>
-                                            <button id="botonBeige" type="button" class="btn boton-beige"></button>
-                                            <button id="botonRosa" type="button" class="btn boton-rosa"></button>
-                                            <button id="botonVioleta" type="button" class="btn boton-violeta"></button>
-                                        </div>
-                                        <div class="row">
-                                            Texto: <br>
-                                            <textarea class="form-control" rows="2" id="comment"></textarea>                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    PRESUPUESTO
-                                </div>
-                                <div class="row">
-                                    DASSDASADDSADS
-                                </div>
-                                <div class="row">
-                                    BOTON
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- /.container -->
+                    
+            </div><!-- /.container -->
 
+        </div>
 
 
         <!-- SCRIPTS -->
 
         <script src="js/jquery.min.js"></script>
+          <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+          
+        <script src="js/tema.js"></script>
         <script src="js/index.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
